@@ -4,6 +4,7 @@ import lombok.Getter;
 import net.jirmjahu.r6mc.cam.CamManager;
 import net.jirmjahu.r6mc.cam.CamManagerImpl;
 import net.jirmjahu.r6mc.command.TestCommand;
+import net.jirmjahu.r6mc.listener.PlayerInteractListener;
 import net.jirmjahu.r6mc.listener.PlayerJoinListener;
 import net.jirmjahu.r6mc.listener.PlayerMoveListener;
 import net.jirmjahu.r6mc.player.GamePlayerManager;
@@ -22,6 +23,7 @@ public class RainbowPlugin extends JavaPlugin {
 
         getServer().getPluginManager().registerEvents(new PlayerJoinListener(gamePlayerManager), this);
         getServer().getPluginManager().registerEvents(new PlayerMoveListener(gamePlayerManager), this);
+        getServer().getPluginManager().registerEvents(new PlayerInteractListener(gamePlayerManager), this);
 
         getCommand("test").setExecutor(new TestCommand(this));
     }

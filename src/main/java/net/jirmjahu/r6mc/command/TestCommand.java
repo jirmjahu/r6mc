@@ -19,7 +19,6 @@ public class TestCommand implements CommandExecutor {
     public boolean onCommand(@NotNull CommandSender sender, @NotNull Command command, @NotNull String label, @NotNull String[] args) {
         Cam cam = plugin.getCamManager().createCam(new Location(plugin.getServer().getWorld("world"), 0, 150, 0), null);
 
-
         plugin.getGamePlayerManager().getPlayer((Player) sender).enterCam(cam);
 
         return false;
