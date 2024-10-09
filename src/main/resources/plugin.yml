@@ -1,0 +1,7 @@
+name: r6mc
+version: 1.0.0
+main: net.jirmjahu.r6mc.RainbowPlugin
+api-version: '1.21.1'
+
+commands:
+  test:
